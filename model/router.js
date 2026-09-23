@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import NoteGrid from '../src/components/NoteGrid.vue';
 import AddNote from '../src/components/AddNote.vue';
 import EditNote from '../src/components/EditNote.vue';
@@ -14,7 +14,8 @@ const routes = [
 
 
 const router = createRouter({
-    routes,
-    history: createWebHistory()
+  routes,
+  history: createWebHashHistory(import.meta.env.BASE_URL)
 });
+
 export default router;
